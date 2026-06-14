@@ -111,7 +111,7 @@
         <aside class="filter-panel" aria-label="Paper filters">
           <div class="control-block">
             <label for="paper-search">Search</label>
-            <input id="paper-search" type="search" autocomplete="off" placeholder="Title, acronym, substrate, backbone">
+            <input id="paper-search" type="search" autocomplete="off" placeholder="Title, acronym, method">
           </div>
 
           <div class="control-block">
@@ -129,13 +129,12 @@
             <div class="segmented" data-filter-group="philosophy"></div>
           </div>
 
-          <div class="control-block">
-            <div class="control-label">Predictive substrate</div>
-            <div class="segmented" data-filter-group="substrateGroup"></div>
-          </div>
-
           <details class="axis-details" open>
             <summary>Component anatomy axes</summary>
+            <div class="control-block">
+              <div class="control-label">Predictive substrate</div>
+              <div class="segmented compact" data-filter-group="substrateGroup"></div>
+            </div>
             <div class="control-block">
               <div class="control-label">Backbone</div>
               <div class="segmented compact" data-filter-group="backbone"></div>
