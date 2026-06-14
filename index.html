@@ -3,97 +3,132 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Homepage and interactive paper explorer for the World Action Models survey.">
-  <meta name="theme-color" content="#f5f5f7">
+  <meta name="description" content="Academic project homepage and interactive paper explorer for the World Action Models survey.">
+  <meta name="theme-color" content="#f7f8fa">
   <title>World Action Models: A Survey</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="assets/img/hero-wam-future.webp" as="image">
+  <link rel="preload" href="assets/img/figures/fig-wam-timeline-themed.webp" as="image">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <header class="site-nav" aria-label="Primary">
-    <a class="brand" href="#top" aria-label="World Action Models home">WAM Survey</a>
-    <nav class="nav-links">
-      <a href="#views">Views</a>
-      <a href="#explorer">Papers</a>
-      <a href="#figures">Figures</a>
-      <a href="#updates">Updates</a>
+  <aside class="side-nav" aria-label="Page navigation">
+    <a class="nav-title" href="#top" aria-label="World Action Models survey home">
+      <span>WAM</span>
+      <strong>Survey</strong>
+    </a>
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#definition">Definition</a>
+      <a href="#papers">Paper list</a>
+      <a href="#metadata">Metadata</a>
     </nav>
-    <a class="nav-cta" href="#explorer">Explore</a>
-  </header>
+  </aside>
 
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-media" src="assets/img/hero-wam-future.webp" width="1672" height="941" alt="Robot arm choosing an action from translucent future panels.">
-      <div class="hero-copy">
-        <p class="eyebrow">World Action Models</p>
-        <h1 id="hero-title">A Survey from World Models to Embodied Control</h1>
-        <p class="hero-subtitle">A living map of methods that make predicted futures available to action.</p>
-        <div class="hero-actions" aria-label="Hero actions">
-          <a class="button primary" href="#explorer">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"></circle><path d="M16 16 L21 21"></path></svg>
-            Browse papers
-          </a>
-          <a class="button secondary" href="#figures">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="12" rx="2"></rect><path d="M4 17 L9 12 L13 15 L16 11 L20 16"></path></svg>
-            View figures
-          </a>
+  <main id="top" class="page-shell">
+    <section class="paper-hero" id="overview" aria-labelledby="paper-title">
+      <div class="hero-text">
+        <p class="eyebrow">Academic survey project</p>
+        <h1 id="paper-title">World Action Models: A Survey from World Models to Embodied Control</h1>
+        <p class="hero-summary">
+          A structured survey of predictive-action models that make a forecast of the future available to action.
+          The homepage mirrors the paper’s two central views: a philosophy-level taxonomy and a component-level anatomy.
+        </p>
+        <dl class="paper-meta-list">
+          <div>
+            <dt>Authorship</dt>
+            <dd>Qiuhong Shen</dd>
+          </div>
+          <div>
+            <dt>Institution</dt>
+            <dd>National University of Singapore (NUS)</dd>
+          </div>
+          <div>
+            <dt>Current census</dt>
+            <dd><span data-total-papers>112</span> WAM papers with arXiv dates and citation metadata</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="overview-card" aria-label="Survey overview">
+        <h2>What this page contains</h2>
+        <p>
+          The survey separates WAMs from neighbouring VLAs and world models, then organises the literature through
+          two orthogonal coordinates. The first asks what the model must generate. The second asks how the model is built.
+        </p>
+        <div class="overview-grid">
+          <div>
+            <span class="mini-label">Taxonomy</span>
+            <strong>Render-and-Decode, Latent-Only, Video-Generation-Free</strong>
+          </div>
+          <div>
+            <span class="mini-label">Anatomy</span>
+            <strong>Substrate, backbone, coupling, deployment</strong>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="signal-strip" aria-label="Survey signals">
-      <div class="signal">
-        <span class="signal-label">Taxonomy</span>
-        <strong>Render, latent, or generation-free</strong>
-      </div>
-      <div class="signal">
-        <span class="signal-label">Anatomy</span>
-        <strong>Substrate, backbone, coupling, deployment</strong>
-      </div>
-      <div class="signal">
-        <span class="signal-label">Census</span>
-        <strong><span data-total-papers>112</span> indexed WAM papers</strong>
-      </div>
-    </section>
-
-    <section class="section intro-band" id="views" aria-labelledby="views-title">
+    <section class="content-section" id="timeline" aria-labelledby="timeline-title">
       <div class="section-heading">
-        <p class="eyebrow">Two Orthogonal Views</p>
-        <h2 id="views-title">One field, two ways to navigate it.</h2>
+        <p class="eyebrow">Chronological map</p>
+        <h2 id="timeline-title">How the WAM literature unfolds.</h2>
+        <p>
+          The timeline groups representative works by design philosophy. Render-and-Decode appears first, followed by
+          Latent-Only shortcuts and Video-Generation-Free methods that carry predictive supervision outside video generation.
+        </p>
       </div>
-      <div class="view-grid">
-        <article class="view-card accent-blue">
-          <span class="view-number">01</span>
-          <h3>Design philosophy</h3>
-          <p>Classifies each WAM by what the action path requires the model to generate: a rendered future, an intermediate future, or no video-generation backbone.</p>
-          <div class="pill-row" aria-label="Design philosophies">
-            <span>Render-and-Decode</span>
-            <span>Latent-Only</span>
-            <span>Video-Generation-Free</span>
-          </div>
-        </article>
-        <article class="view-card accent-rust">
-          <span class="view-number">02</span>
-          <h3>Component anatomy</h3>
-          <p>Places the same methods on four axes that determine how the future is represented, produced, coupled to action, and invoked during control.</p>
-          <div class="pill-row" aria-label="Anatomy axes">
-            <span>Substrate</span>
-            <span>Backbone</span>
-            <span>Coupling</span>
-            <span>Deployment</span>
-          </div>
-        </article>
+      <figure class="embedded-figure timeline-figure">
+        <img src="assets/img/figures/fig-wam-timeline-themed.webp" width="1400" height="788" alt="Timeline of representative World Action Models grouped by design philosophy.">
+        <figcaption>Timeline figure from the current survey, recoloured to match the homepage surface.</figcaption>
+      </figure>
+    </section>
+
+    <section class="content-section definition-section" id="definition" aria-labelledby="definition-title">
+      <div class="section-heading">
+        <p class="eyebrow">Definition</p>
+        <h2 id="definition-title">A WAM is not just a video generator with an action head.</h2>
+        <p>
+          In the survey, a World Action Model begins when a predicted future becomes action-facing. The future may be
+          rendered pixels, latents, features, flow, affordance maps, audio, or tokens. What matters is that the predicted
+          future helps produce, score, verify, or train the action path.
+        </p>
+      </div>
+
+      <div class="definition-grid">
+        <figure class="embedded-figure definition-figure">
+          <img src="assets/img/figures/fig-wam-definition.svg" width="1600" height="900" alt="Definition diagram contrasting VLA, world model, and World Action Model.">
+          <figcaption>A simplified Section 2 definition: VLA predicts action, world model predicts future, and WAM links future prediction to action.</figcaption>
+        </figure>
+
+        <div class="definition-notes">
+          <article>
+            <h3>Neighbouring models</h3>
+            <p><strong>VLA:</strong> maps observation and instruction directly to action. <strong>World model:</strong> predicts a future observation or state. Either can be useful without being a WAM.</p>
+          </article>
+          <article>
+            <h3>WAM contract</h3>
+            <p>A WAM keeps the predicted future in the action path. The action may come after prediction, be scored by prediction, or be generated jointly with prediction.</p>
+          </article>
+          <article>
+            <h3>Boundary</h3>
+            <p>A direct VLA with an auxiliary future loss, a simulator used only for RL training, or a future head discarded before action use does not satisfy the WAM definition.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section explorer-section" id="explorer" aria-labelledby="explorer-title">
+    <section class="content-section explorer-section" id="papers" aria-labelledby="papers-title">
       <div class="section-heading wide">
-        <p class="eyebrow">Interactive Census</p>
-        <h2 id="explorer-title">Sort the WAM literature by recency, citations, taxonomy, and anatomy.</h2>
+        <p class="eyebrow">Fine-grained paper list</p>
+        <h2 id="papers-title">Explore papers by taxonomy and component anatomy.</h2>
+        <p>
+          The list is generated from the current Section 4 census table, then enriched with arXiv links, first-version dates,
+          and weekly updatable citation counts.
+        </p>
       </div>
 
-      <div class="explorer-layout">
+      <div class="explorer-shell">
         <aside class="filter-panel" aria-label="Paper filters">
           <div class="control-block">
             <label for="paper-search">Search</label>
@@ -121,7 +156,7 @@
           </div>
 
           <details class="axis-details" open>
-            <summary>More anatomy axes</summary>
+            <summary>Component anatomy axes</summary>
             <div class="control-block">
               <div class="control-label">Backbone</div>
               <div class="segmented compact" data-filter-group="backbone"></div>
@@ -139,7 +174,7 @@
           <button class="clear-button" type="button" id="clear-filters"><span aria-hidden="true">×</span> Clear filters</button>
         </aside>
 
-        <div class="papers-panel">
+        <div class="papers-workspace">
           <div class="matrix-shell" aria-labelledby="matrix-title">
             <div>
               <p class="mini-label">Taxonomy × substrate</p>
@@ -164,73 +199,32 @@
       </div>
     </section>
 
-    <section class="section figure-section" id="figures" aria-labelledby="figures-title">
+    <section class="content-section metadata-section" id="metadata" aria-labelledby="metadata-title">
       <div class="section-heading">
-        <p class="eyebrow">Survey Figures</p>
-        <h2 id="figures-title">The paper’s visual spine, formatted for the web.</h2>
-      </div>
-
-      <div class="figure-tabs" role="tablist" aria-label="Survey figures">
-        <button type="button" role="tab" aria-selected="true" data-figure="0">Philosophies</button>
-        <button type="button" role="tab" aria-selected="false" data-figure="1">Timeline</button>
-        <button type="button" role="tab" aria-selected="false" data-figure="2">Anatomy</button>
-        <button type="button" role="tab" aria-selected="false" data-figure="3">Substrates</button>
-        <button type="button" role="tab" aria-selected="false" data-figure="4">Coupling</button>
-      </div>
-
-      <figure class="showcase-figure">
-        <img id="figure-image" src="assets/img/figures/fig-three-philosophies.webp" width="1400" height="788" alt="Three design philosophies of World Action Models.">
-        <figcaption>
-          <strong id="figure-title">Three design philosophies</strong>
-          <span id="figure-caption">A taxonomy over what the model carries through the inference path before action is obtained.</span>
-        </figcaption>
-      </figure>
-
-      <div class="paper-figure-grid" aria-label="Selected method figures from the slide deck">
-        <article>
-          <img src="assets/img/papers/paper-genie-ge-act.webp" width="1200" height="330" alt="Genie Envisioner action decoding diagram.">
-          <h3>Latent action decoding</h3>
-          <p>Genie Envisioner exemplifies the move from rendered videos to cached latent features consumed by an action decoder.</p>
-        </article>
-        <article>
-          <img src="assets/img/papers/paper-fastwam-latency.webp" width="1200" height="488" alt="Fast-WAM latency comparison plot.">
-          <h3>Future generation as a deployment choice</h3>
-          <p>Fast-WAM makes the control-time cost of future imagination visible by masking the future branch at inference.</p>
-        </article>
-        <article>
-          <img src="assets/img/papers/paper-ckt-latency-success.webp" width="1200" height="596" alt="CKT-WAM latency and success comparison plot.">
-          <h3>Practical control trade-offs</h3>
-          <p>Recent WAMs increasingly expose latency, memory, and control success as coupled design constraints.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section update-band" id="updates" aria-labelledby="updates-title">
-      <div class="section-heading">
-        <p class="eyebrow">Living Metadata</p>
-        <h2 id="updates-title">Citation counts refresh weekly.</h2>
+        <p class="eyebrow">Living metadata</p>
+        <h2 id="metadata-title">Citation counts refresh weekly.</h2>
       </div>
       <div class="update-grid">
         <article>
-          <h3>Self-contained deployment</h3>
-          <p>The deployed repository includes the page, assets, data, and update workflow needed by GitHub Pages.</p>
+          <h3>Self-contained repository</h3>
+          <p>The GitHub Pages repository includes the page, assets, paper data, and the weekly update workflow.</p>
         </article>
         <article>
-          <h3>Paper data aligned to the survey</h3>
-          <p>The paper list is generated from the active Section 4 census table, joined with the survey bibliography and curated summaries.</p>
+          <h3>Survey-aligned data</h3>
+          <p>The paper list is generated from the active survey census and bibliography, not from the older slide deck.</p>
         </article>
         <article>
           <h3>Metadata sources</h3>
-          <p>Exact first-version dates come from arXiv metadata. Citation counts refresh from Semantic Scholar, with OpenAlex as a fallback.</p>
+          <p>Exact first-version dates come from arXiv. Citation counts refresh from Semantic Scholar with OpenAlex fallback.</p>
         </article>
       </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <span>World Action Models survey homepage</span>
-    <a href="#top">Back to top</a>
-  </footer>
+    <footer class="site-footer">
+      <span>World Action Models survey homepage</span>
+      <a href="#top">Back to top</a>
+    </footer>
+  </main>
 
   <script src="assets/js/app.js" type="module"></script>
 </body>

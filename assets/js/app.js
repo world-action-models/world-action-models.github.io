@@ -13,38 +13,6 @@ const state = {
 
 const philosophyOrder = ["Render-and-Decode", "Latent-Only", "Video-Generation-Free"];
 const substrateOrder = ["Pixel-grounded", "Feature", "Geometric", "Affordance"];
-const figureData = [
-  {
-    title: "Three design philosophies",
-    caption: "A taxonomy over what the model carries through the inference path before action is obtained.",
-    src: "assets/img/figures/fig-three-philosophies.webp",
-    alt: "Three design philosophies of World Action Models.",
-  },
-  {
-    title: "Chronological WAM stream",
-    caption: "A timeline that shows how Render-and-Decode appears first, with Latent-Only and Video-Generation-Free lines becoming denser later.",
-    src: "assets/img/figures/fig-wam-timeline.webp",
-    alt: "Timeline of representative World Action Models grouped by design philosophy.",
-  },
-  {
-    title: "WAM anatomy",
-    caption: "The four-axis anatomy: predictive substrate, architectural backbone, action coupling, and deployment regime.",
-    src: "assets/img/figures/fig-wam-anatomy.webp",
-    alt: "Anatomy of a World Action Model with four design axes.",
-  },
-  {
-    title: "Predictive substrates",
-    caption: "Pixel-grounded, feature, geometric, and affordance substrates arranged by what the action expert consumes.",
-    src: "assets/img/figures/fig-substrate-ladder.webp",
-    alt: "Substrate ladder for World Action Models.",
-  },
-  {
-    title: "Action coupling regimes",
-    caption: "The main action-coupling families: action-conditioned rollout, joint denoising, and post-prediction heads.",
-    src: "assets/img/figures/fig-coupling-regimes.webp",
-    alt: "Action coupling regimes for World Action Models.",
-  },
-];
 
 const selectors = {
   search: document.querySelector("#paper-search"),
@@ -54,9 +22,6 @@ const selectors = {
   metadataDate: document.querySelector("#metadata-date"),
   matrix: document.querySelector("#taxonomy-matrix"),
   clear: document.querySelector("#clear-filters"),
-  figureImage: document.querySelector("#figure-image"),
-  figureTitle: document.querySelector("#figure-title"),
-  figureCaption: document.querySelector("#figure-caption"),
 };
 
 function escapeHtml(value) {
@@ -269,18 +234,6 @@ function bindEvents() {
       return;
     }
 
-    const figureButton = event.target.closest("[data-figure]");
-    if (figureButton) {
-      const index = Number(figureButton.dataset.figure);
-      const figure = figureData[index];
-      document.querySelectorAll("[data-figure]").forEach((button) => {
-        button.setAttribute("aria-selected", String(button === figureButton));
-      });
-      selectors.figureImage.src = figure.src;
-      selectors.figureImage.alt = figure.alt;
-      selectors.figureTitle.textContent = figure.title;
-      selectors.figureCaption.textContent = figure.caption;
-    }
   });
 
   selectors.clear.addEventListener("click", () => {

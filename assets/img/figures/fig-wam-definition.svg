@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">What makes a World Action Model</title>
+  <desc id="desc">A diagram contrasting VLA, world model, and World Action Model definitions.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8f9fb; }
+      .panel { fill: #ffffff; stroke: #d6dbe1; stroke-width: 3; }
+      .panel-blue { fill: #e8f2ff; stroke: #75a8da; stroke-width: 3; }
+      .panel-green { fill: #e8f5ef; stroke: #77bb99; stroke-width: 3; }
+      .panel-rust { fill: #fff0e8; stroke: #d08a64; stroke-width: 3; }
+      .chip { fill: #f1f4f7; stroke: #cfd6df; stroke-width: 2; }
+      .ink { fill: #202124; font-family: "Comic Neue", "Comic Sans MS", ui-sans-serif, sans-serif; }
+      .muted { fill: #626973; font-family: "Comic Neue", "Comic Sans MS", ui-sans-serif, sans-serif; }
+      .title { font-size: 46px; font-weight: 700; }
+      .subtitle { font-size: 24px; }
+      .label { font-size: 26px; font-weight: 700; }
+      .small { font-size: 21px; }
+      .tiny { font-size: 18px; }
+      .math { font-size: 23px; font-weight: 700; }
+      .shaft { fill: none; stroke: #9aa5b1; stroke-width: 7; stroke-linecap: butt; }
+      .shaft-blue { fill: none; stroke: #2f72bd; stroke-width: 6; stroke-linecap: butt; }
+      .shaft-green { fill: none; stroke: #2c8a5f; stroke-width: 6; stroke-linecap: butt; }
+      .head { fill: #9aa5b1; }
+      .head-blue { fill: #2f72bd; }
+      .head-green { fill: #2c8a5f; }
+      .dash { fill: none; stroke: #b8c0ca; stroke-width: 3; stroke-dasharray: 10 10; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="900"/>
+
+  <text x="92" y="78" class="ink title">What makes a World Action Model?</text>
+  <text x="94" y="118" class="muted subtitle">A WAM links future prediction to the action path. The future can be pixels, latents, features, geometry, affordances, audio, or tokens.</text>
+
+  <rect x="92" y="180" width="414" height="235" rx="18" class="panel-blue"/>
+  <text x="122" y="226" class="ink label">Vision-Language-Action</text>
+  <text x="122" y="264" class="muted small">acts from current context</text>
+  <rect x="124" y="300" width="170" height="56" rx="16" class="chip"/>
+  <text x="153" y="337" class="ink math">o, l</text>
+  <path d="M 298 328 H 372" class="shaft-blue"/>
+  <polygon points="396,328 372,316 372,340" class="head-blue"/>
+  <rect x="398" y="300" width="78" height="56" rx="16" class="chip"/>
+  <text x="427" y="337" class="ink math">a</text>
+  <text x="122" y="382" class="muted tiny">Learns p(a | o,l). A future is not required.</text>
+
+  <rect x="594" y="180" width="414" height="235" rx="18" class="panel-green"/>
+  <text x="624" y="226" class="ink label">World model</text>
+  <text x="624" y="264" class="muted small">predicts what happens next</text>
+  <rect x="626" y="300" width="170" height="56" rx="16" class="chip"/>
+  <text x="655" y="337" class="ink math">o, a, l</text>
+  <path d="M 800 328 H 874" class="shaft-green"/>
+  <polygon points="898,328 874,316 874,340" class="head-green"/>
+  <rect x="900" y="300" width="78" height="56" rx="16" class="chip"/>
+  <text x="925" y="337" class="ink math">s'</text>
+  <text x="624" y="382" class="muted tiny">Learns p(s' | o,a,l). It may not choose action.</text>
+
+  <rect x="1096" y="180" width="414" height="235" rx="18" class="panel-rust"/>
+  <text x="1126" y="226" class="ink label">World Action Model</text>
+  <text x="1126" y="264" class="muted small">makes the future action-facing</text>
+  <rect x="1128" y="300" width="126" height="56" rx="16" class="chip"/>
+  <text x="1160" y="337" class="ink math">o, l</text>
+  <path d="M 1258 328 H 1320" class="shaft"/>
+  <polygon points="1344,328 1320,316 1320,340" class="head"/>
+  <rect x="1346" y="288" width="128" height="78" rx="16" class="chip"/>
+  <text x="1376" y="320" class="ink math">s', a</text>
+  <text x="1368" y="347" class="muted tiny">joint path</text>
+  <text x="1126" y="382" class="muted tiny">Learns or uses p(s',a | o,l).</text>
+
+  <path d="M 300 470 H 1300" class="dash"/>
+  <text x="645" y="500" class="muted small">The WAM boundary is the action-facing future, not the video generator.</text>
+
+  <rect x="124" y="560" width="352" height="182" rx="18" class="panel"/>
+  <text x="154" y="604" class="ink label">1. Predict then act</text>
+  <text x="154" y="642" class="muted small">future first, action second</text>
+  <text x="154" y="686" class="ink math">p(s' | o,l) q(a | o,s',l)</text>
+  <path d="M 286 718 H 350" class="shaft"/>
+  <polygon points="374,718 350,706 350,730" class="head"/>
+
+  <rect x="624" y="560" width="352" height="182" rx="18" class="panel"/>
+  <text x="654" y="604" class="ink label">2. Score actions</text>
+  <text x="654" y="642" class="muted small">candidate action, predicted consequence</text>
+  <text x="654" y="686" class="ink math">q(a | o,l) p(s' | o,a,l)</text>
+  <path d="M 786 718 H 850" class="shaft"/>
+  <polygon points="874,718 850,706 850,730" class="head"/>
+
+  <rect x="1124" y="560" width="352" height="182" rx="18" class="panel"/>
+  <text x="1154" y="604" class="ink label">3. Joint prediction</text>
+  <text x="1154" y="642" class="muted small">future and action in one coupled model</text>
+  <text x="1154" y="686" class="ink math">p(s', a | o,l)</text>
+  <path d="M 1286 718 H 1350" class="shaft"/>
+  <polygon points="1374,718 1350,706 1350,730" class="head"/>
+
+  <path d="M 476 650 C 545 600 560 600 624 650" class="shaft"/>
+  <polygon points="624,650 596,644 611,626" class="head"/>
+  <path d="M 976 650 C 1045 600 1060 600 1124 650" class="shaft"/>
+  <polygon points="1124,650 1096,644 1111,626" class="head"/>
+
+  <text x="124" y="818" class="muted small">Not WAM: a direct VLA with no action-facing future, a simulator used only for RL training, or a future head discarded before action use.</text>
+</svg>

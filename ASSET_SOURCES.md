@@ -2,35 +2,25 @@
 
 All deployed assets are local copies so the GitHub Pages repository is self-contained.
 
-## Generated / Presentation Asset
+## Survey Timeline
 
-- `assets/img/hero-wam-future.webp`
-  - Optimised from `../../presentation-survey/assets/hero-wam-future.png`.
-  - Original image was generated with the built-in image generation tool for the
-    survey presentation as a text-free 16:9 illustration of a robot selecting an
-    action from future-frame panels.
-
-## Survey Figures
-
-Optimised from current `../../our-wam-survey/figures/*.png` render outputs:
-
-- `assets/img/figures/fig-three-philosophies.webp`
 - `assets/img/figures/fig-wam-timeline.webp`
-- `assets/img/figures/fig-wam-anatomy.webp`
-- `assets/img/figures/fig-substrate-ladder.webp`
-- `assets/img/figures/fig-coupling-regimes.webp`
+  - Optimised from `../../our-wam-survey/figures/fig-wam-timeline.png`.
+  - Kept as an archival local copy.
 
-## Selected Method Figures
+- `assets/img/figures/fig-wam-timeline-themed.webp`
+  - Homepage copy derived from `fig-wam-timeline.webp`.
+  - Near-white background pixels were recoloured to the homepage surface tone so
+    the figure sits cleanly in the project page body.
 
-Optimised from the older HTML slide deck assets for supporting context:
+## Homepage Definition Figure
 
-- `assets/img/papers/paper-genie-ge-act.webp`
-- `assets/img/papers/paper-fastwam-latency.webp`
-- `assets/img/papers/paper-ckt-latency-success.webp`
-
-These are used as optional visual context below the survey figure carousel. The
-homepage's paper classifications and text are generated from the current survey
-census rather than from the older slide content.
+- `assets/img/figures/fig-wam-definition.svg`
+  - Code-native hand-drawn-style SVG created for this homepage using the
+    `paper-handdrawn-figures` workflow.
+  - It simplifies Section 2 of the current survey into the VLA / world model /
+    WAM boundary and the three WAM factorisation patterns.
+  - Text, arrows, boxes, and equations are vector SVG objects.
 
 ## Fonts
 
