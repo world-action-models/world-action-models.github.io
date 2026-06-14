@@ -176,7 +176,7 @@ function paperCard(paper) {
         <span class="tag">${escapeHtml(paper.coupling)}</span>
         <span class="tag">${escapeHtml(paper.deployment)}</span>
       </div>
-      <p class="paper-summary">${escapeHtml(paper.tldr || paper.backboneDetail || "Survey census entry.")}</p>
+      <p class="paper-summary">${escapeHtml(paper.tldr || paper.backboneDetail || "Survey paper entry.")}</p>
       <div class="paper-bottom">
         <span class="backbone-detail">${escapeHtml(paper.backboneDetail)}</span>
       </div>

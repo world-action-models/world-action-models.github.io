@@ -7,7 +7,7 @@ Static GitHub Pages homepage for the WAM survey.
 - `index.html`: deployed page.
 - `assets/css/styles.css`: visual design.
 - `assets/js/app.js`: client-side paper explorer.
-- `assets/data/papers.json`: generated paper census plus citation metadata.
+- `assets/data/papers.json`: generated paper collection plus citation metadata.
 - `assets/img/figures/`: local timeline and WAM definition figures.
 - `scripts/update-paper-metadata.mjs`: refreshes exact arXiv first-version dates and citation counts.
 - `.github/workflows/update-paper-metadata.yml`: weekly metadata refresh workflow.
@@ -22,7 +22,7 @@ Then open `http://127.0.0.1:8080/`.
 
 ## Data Refresh
 
-The paper census is generated in the parent workspace by:
+The paper collection is generated in the parent workspace by:
 
 ```bash
 node ../materials/build-papers-data.mjs
