@@ -2,6 +2,14 @@
 
 All deployed assets are local copies so the GitHub Pages repository is self-contained.
 
+## Overview Hero Background
+
+- `assets/img/figures/hero-wam-future.png`
+  - Copied from `../../presentation-survey/assets/hero-wam-future.png`, the first
+    image asset used by the presentation-survey hero slide.
+  - Used as the overview background with translucent overlays so the title block
+    remains readable and the page fades smoothly into the definition section.
+
 ## Survey Timeline
 
 - `assets/img/figures/fig-wam-timeline.webp`
