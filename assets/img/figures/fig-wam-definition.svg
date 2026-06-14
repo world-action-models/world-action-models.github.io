@@ -41,8 +41,7 @@
   <text x="80" y="105" class="muted subtitle">A predicted future becomes a WAM only when it stays in the action path.</text>
 
   <rect x="78" y="128" width="1444" height="84" rx="18" class="panel"/>
-  <text x="106" y="166" class="ink legend-head">Notation</text>
-  <text x="106" y="194" class="muted legend-text">Each probability block uses the same symbols.</text>
+  <text x="106" y="176" class="ink legend-head">Notation</text>
   <rect x="300" y="146" width="64" height="42" rx="13" class="chip"/>
   <text x="332" y="173" text-anchor="middle" class="ink math">o</text>
   <text x="376" y="173" class="muted legend-text">observation</text>
@@ -53,8 +52,8 @@
   <text x="822" y="173" text-anchor="middle" class="ink math">a</text>
   <text x="866" y="173" class="muted legend-text">action</text>
   <rect x="1015" y="146" width="64" height="42" rx="13" class="chip"/>
-  <text x="1047" y="173" text-anchor="middle" class="ink math">s'</text>
-  <text x="1091" y="173" class="muted legend-text">predicted future state</text>
+  <text x="1047" y="173" text-anchor="middle" class="ink math">o'</text>
+  <text x="1091" y="173" class="muted legend-text">future observation</text>
   <rect x="1262" y="146" width="124" height="42" rx="13" class="formula"/>
   <text x="1324" y="173" class="ink legend-head" text-anchor="middle">p(x | y)</text>
   <text x="1446" y="162" class="muted legend-text" text-anchor="middle">conditional</text>
@@ -80,9 +79,9 @@
   <path d="M 794 377 H 859" class="shaft-green"/>
   <polygon points="883,377 859,365 859,389" class="head-green"/>
   <rect x="892" y="352" width="82" height="50" rx="15" class="chip"/>
-  <text x="933" y="384" text-anchor="middle" class="ink math">s'</text>
+  <text x="933" y="384" text-anchor="middle" class="ink math">o'</text>
   <rect x="628" y="408" width="346" height="42" rx="13" class="formula"/>
-  <text x="801" y="436" text-anchor="middle" class="ink math">p(s' | o, a, l)</text>
+  <text x="801" y="436" text-anchor="middle" class="ink math">p(o' | o, a, l)</text>
 
   <rect x="1098" y="250" width="420" height="216" rx="18" class="panel-rust"/>
   <text x="1128" y="294" class="ink label">World Action Model</text>
@@ -92,10 +91,10 @@
   <path d="M 1278 377 H 1342" class="shaft-rust"/>
   <polygon points="1366,377 1342,365 1342,389" class="head-rust"/>
   <rect x="1376" y="344" width="102" height="66" rx="15" class="chip"/>
-  <text x="1427" y="373" text-anchor="middle" class="ink math">s', a</text>
+  <text x="1427" y="373" text-anchor="middle" class="ink math">o', a</text>
   <text x="1427" y="397" text-anchor="middle" class="muted tiny">joint path</text>
   <rect x="1136" y="408" width="346" height="42" rx="13" class="formula"/>
-  <text x="1309" y="436" text-anchor="middle" class="ink math">p(s', a | o, l)</text>
+  <text x="1309" y="436" text-anchor="middle" class="ink math">p(o', a | o, l)</text>
 
   <path d="M 130 500 H 1470" class="dash"/>
   <text x="800" y="532" text-anchor="middle" class="muted small">Boundary: the predicted future must help produce, score, verify, or train action.</text>
@@ -104,11 +103,11 @@
   <text x="122" y="628" class="ink label">1. Predict then act</text>
   <text x="122" y="660" class="muted small">future first, action second</text>
   <rect x="145" y="680" width="304" height="42" rx="13" class="formula"/>
-  <text x="297" y="708" text-anchor="middle" class="ink math">p(s' | o, l)</text>
+  <text x="297" y="708" text-anchor="middle" class="ink math">p(o' | o, l)</text>
   <path d="M 297 729 V 745" class="shaft-rust thin"/>
   <polygon points="297,766 286,745 308,745" class="head-rust"/>
   <rect x="145" y="768" width="304" height="42" rx="13" class="formula"/>
-  <text x="297" y="796" text-anchor="middle" class="ink math">p(a | o, s', l)</text>
+  <text x="297" y="796" text-anchor="middle" class="ink math">p(a | o, o', l)</text>
 
   <rect x="595" y="570" width="410" height="250" rx="18" class="panel-wam"/>
   <text x="625" y="628" class="ink label">2. Score actions</text>
@@ -118,15 +117,15 @@
   <path d="M 776 712 H 823" class="shaft-rust thin"/>
   <polygon points="844,712 823,701 823,723" class="head-rust"/>
   <rect x="855" y="688" width="120" height="48" rx="13" class="chip"/>
-  <text x="915" y="719" text-anchor="middle" class="ink math">s'</text>
+  <text x="915" y="719" text-anchor="middle" class="ink math">o'</text>
   <rect x="642" y="758" width="316" height="42" rx="13" class="formula"/>
-  <text x="800" y="786" text-anchor="middle" class="ink math">p(s' | o, a, l)</text>
+  <text x="800" y="786" text-anchor="middle" class="ink math">p(o' | o, a, l)</text>
 
   <rect x="1098" y="570" width="410" height="250" rx="18" class="panel-wam"/>
   <text x="1128" y="628" class="ink label">3. Joint prediction</text>
   <text x="1128" y="660" class="muted small">future and action in one coupled model</text>
   <rect x="1160" y="696" width="286" height="56" rx="15" class="formula"/>
-  <text x="1303" y="732" text-anchor="middle" class="ink math">p(s', a | o, l)</text>
+  <text x="1303" y="732" text-anchor="middle" class="ink math">p(o', a | o, l)</text>
   <path d="M 1303 760 V 777" class="shaft-rust thin"/>
   <polygon points="1303,798 1292,777 1314,777" class="head-rust"/>
   <text x="1303" y="806" text-anchor="middle" class="muted small">one shared action-facing path</text>
