@@ -8,6 +8,7 @@
       .panel-blue { fill: #e8f2ff; stroke: #75a8da; stroke-width: 3; }
       .panel-green { fill: #e8f5ef; stroke: #77bb99; stroke-width: 3; }
       .panel-rust { fill: #fff0e8; stroke: #d08a64; stroke-width: 3; }
+      .panel-wam { fill: #fff8f3; stroke: #d08a64; stroke-width: 3; }
       .chip { fill: #f1f4f7; stroke: #cfd6df; stroke-width: 2; }
       .formula { fill: #ffffff; stroke: #cfd6df; stroke-width: 2; }
       .ink { fill: #202124; font-family: "Comic Neue", "Comic Sans MS", ui-sans-serif, sans-serif; }
@@ -54,10 +55,12 @@
   <rect x="1015" y="146" width="64" height="42" rx="13" class="chip"/>
   <text x="1047" y="173" text-anchor="middle" class="ink math">s'</text>
   <text x="1091" y="173" class="muted legend-text">predicted future state</text>
-  <text x="1310" y="173" class="ink legend-head" text-anchor="middle">p(x | y)</text>
-  <text x="1386" y="173" class="muted legend-text">conditional model</text>
+  <rect x="1262" y="146" width="124" height="42" rx="13" class="formula"/>
+  <text x="1324" y="173" class="ink legend-head" text-anchor="middle">p(x | y)</text>
+  <text x="1446" y="162" class="muted legend-text" text-anchor="middle">conditional</text>
+  <text x="1446" y="184" class="muted legend-text" text-anchor="middle">model</text>
 
-  <rect x="82" y="250" width="420" height="196" rx="18" class="panel-blue"/>
+  <rect x="82" y="250" width="420" height="216" rx="18" class="panel-blue"/>
   <text x="112" y="294" class="ink label">Vision-Language-Action</text>
   <text x="112" y="326" class="muted small">acts from the current context</text>
   <rect x="126" y="352" width="132" height="50" rx="15" class="chip"/>
@@ -66,10 +69,10 @@
   <polygon points="357,377 333,365 333,389" class="head-blue"/>
   <rect x="366" y="352" width="86" height="50" rx="15" class="chip"/>
   <text x="409" y="384" text-anchor="middle" class="ink math">a</text>
-  <rect x="128" y="400" width="324" height="42" rx="13" class="formula"/>
-  <text x="290" y="428" text-anchor="middle" class="ink math">p(a | o, l)</text>
+  <rect x="128" y="408" width="324" height="42" rx="13" class="formula"/>
+  <text x="290" y="436" text-anchor="middle" class="ink math">p(a | o, l)</text>
 
-  <rect x="590" y="250" width="420" height="196" rx="18" class="panel-green"/>
+  <rect x="590" y="250" width="420" height="216" rx="18" class="panel-green"/>
   <text x="620" y="294" class="ink label">World model</text>
   <text x="620" y="326" class="muted small">predicts what happens next</text>
   <rect x="634" y="352" width="150" height="50" rx="15" class="chip"/>
@@ -78,10 +81,10 @@
   <polygon points="883,377 859,365 859,389" class="head-green"/>
   <rect x="892" y="352" width="82" height="50" rx="15" class="chip"/>
   <text x="933" y="384" text-anchor="middle" class="ink math">s'</text>
-  <rect x="628" y="400" width="346" height="42" rx="13" class="formula"/>
-  <text x="801" y="428" text-anchor="middle" class="ink math">p(s' | o, a, l)</text>
+  <rect x="628" y="408" width="346" height="42" rx="13" class="formula"/>
+  <text x="801" y="436" text-anchor="middle" class="ink math">p(s' | o, a, l)</text>
 
-  <rect x="1098" y="250" width="420" height="196" rx="18" class="panel-rust"/>
+  <rect x="1098" y="250" width="420" height="216" rx="18" class="panel-rust"/>
   <text x="1128" y="294" class="ink label">World Action Model</text>
   <text x="1128" y="326" class="muted small">makes the future action-facing</text>
   <rect x="1142" y="352" width="126" height="50" rx="15" class="chip"/>
@@ -91,35 +94,35 @@
   <rect x="1376" y="344" width="102" height="66" rx="15" class="chip"/>
   <text x="1427" y="373" text-anchor="middle" class="ink math">s', a</text>
   <text x="1427" y="397" text-anchor="middle" class="muted tiny">joint path</text>
-  <rect x="1136" y="400" width="346" height="42" rx="13" class="formula"/>
-  <text x="1309" y="428" text-anchor="middle" class="ink math">p(s', a | o, l)</text>
+  <rect x="1136" y="408" width="346" height="42" rx="13" class="formula"/>
+  <text x="1309" y="436" text-anchor="middle" class="ink math">p(s', a | o, l)</text>
 
   <path d="M 130 500 H 1470" class="dash"/>
   <text x="800" y="532" text-anchor="middle" class="muted small">Boundary: the predicted future must help produce, score, verify, or train action.</text>
 
-  <rect x="92" y="570" width="410" height="250" rx="18" class="panel"/>
+  <rect x="92" y="570" width="410" height="250" rx="18" class="panel-wam"/>
   <text x="122" y="628" class="ink label">1. Predict then act</text>
   <text x="122" y="660" class="muted small">future first, action second</text>
   <rect x="145" y="680" width="304" height="42" rx="13" class="formula"/>
   <text x="297" y="708" text-anchor="middle" class="ink math">p(s' | o, l)</text>
-  <path d="M 297 729 V 745" class="shaft thin"/>
-  <polygon points="297,766 286,745 308,745" class="head"/>
+  <path d="M 297 729 V 745" class="shaft-rust thin"/>
+  <polygon points="297,766 286,745 308,745" class="head-rust"/>
   <rect x="145" y="768" width="304" height="42" rx="13" class="formula"/>
   <text x="297" y="796" text-anchor="middle" class="ink math">p(a | o, s', l)</text>
 
-  <rect x="595" y="570" width="410" height="250" rx="18" class="panel"/>
+  <rect x="595" y="570" width="410" height="250" rx="18" class="panel-wam"/>
   <text x="625" y="628" class="ink label">2. Score actions</text>
   <text x="625" y="660" class="muted small">candidate action, predicted consequence</text>
   <rect x="635" y="688" width="130" height="48" rx="13" class="chip"/>
   <text x="700" y="719" text-anchor="middle" class="ink math">a</text>
-  <path d="M 776 712 H 823" class="shaft thin"/>
-  <polygon points="844,712 823,701 823,723" class="head"/>
+  <path d="M 776 712 H 823" class="shaft-rust thin"/>
+  <polygon points="844,712 823,701 823,723" class="head-rust"/>
   <rect x="855" y="688" width="120" height="48" rx="13" class="chip"/>
   <text x="915" y="719" text-anchor="middle" class="ink math">s'</text>
   <rect x="642" y="758" width="316" height="42" rx="13" class="formula"/>
   <text x="800" y="786" text-anchor="middle" class="ink math">p(s' | o, a, l)</text>
 
-  <rect x="1098" y="570" width="410" height="250" rx="18" class="panel"/>
+  <rect x="1098" y="570" width="410" height="250" rx="18" class="panel-wam"/>
   <text x="1128" y="628" class="ink label">3. Joint prediction</text>
   <text x="1128" y="660" class="muted small">future and action in one coupled model</text>
   <rect x="1160" y="696" width="286" height="56" rx="15" class="formula"/>
