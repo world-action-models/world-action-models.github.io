@@ -20,6 +20,15 @@ All deployed assets are local copies so the GitHub Pages repository is self-cont
   - Homepage copy derived from `fig-wam-timeline.webp`.
   - Near-white background pixels were recoloured to the homepage surface tone so
     the figure sits cleanly in the project page body.
+  - Kept as an archival raster fallback. The homepage now embeds the vector HTML
+    source below.
+
+- `assets/figures/html/fig-wam-timeline.html`
+- `assets/figures/html/generate_wam_timeline.py`
+- `assets/figures/html/style.css`
+  - Copied from `../../our-wam-survey/figures/html/`.
+  - Served directly as the homepage timeline vector figure. The stylesheet path
+    has been adjusted to use the local homepage fonts under `assets/fonts/`.
 
 ## Homepage Definition Figure
 
@@ -29,6 +38,10 @@ All deployed assets are local copies so the GitHub Pages repository is self-cont
   - It simplifies Section 2 of the current survey into the VLA / world model /
     WAM boundary and the three WAM factorisation patterns.
   - Text, arrows, boxes, and equations are vector SVG objects.
+
+- `assets/figures/html/fig-wam-definition.html`
+  - Local HTML vector wrapper for the tracked SVG source above, used by the
+    homepage so both embedded figures are loaded as vector figure documents.
 
 ## Fonts
 

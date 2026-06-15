@@ -318,9 +318,16 @@ h3 {
   overflow: hidden;
 }
 
-.embedded-figure img {
+.embedded-figure img,
+.vector-figure-frame {
   width: 100%;
   background: #f8f9fb;
+}
+
+.vector-figure-frame {
+  display: block;
+  aspect-ratio: 16 / 9;
+  border: 0;
 }
 
 .embedded-figure figcaption {
@@ -339,7 +346,7 @@ h3 {
   gap: 18px;
 }
 
-.definition-figure img {
+.definition-figure .vector-figure-frame {
   background: #f8f9fb;
 }
 

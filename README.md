@@ -8,7 +8,8 @@ Static GitHub Pages homepage for the WAM survey.
 - `assets/css/styles.css`: visual design.
 - `assets/js/app.js`: client-side paper explorer.
 - `assets/data/papers.json`: generated paper collection plus citation metadata.
-- `assets/img/figures/`: local timeline and WAM definition figures.
+- `assets/img/figures/`: local image and SVG figure assets.
+- `assets/figures/html/`: tracked vector figure source documents embedded by the homepage.
 - `scripts/update-paper-metadata.mjs`: refreshes exact arXiv first-version dates and citation counts.
 - `.github/workflows/update-paper-metadata.yml`: weekly metadata refresh workflow.
 

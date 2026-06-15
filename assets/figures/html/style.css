@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "Comic Neue";
+  src: url("../../fonts/ComicNeue-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Comic Neue";
+  src: url("../../fonts/ComicNeue-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #f8f9fb;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #f8f9fb;
+  font-family: "Comic Neue", "Comic Sans MS", cursive;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+.definition-object {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #f8f9fb;
+}
+
+@page {
+  size: 16in 9in;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body,
+  svg {
+    width: 16in;
+    height: 9in;
+  }
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  fill: #050505;
+}
+
+.subtitle {
+  font-size: 28px;
+  fill: #303030;
+}
+
+.panel-title {
+  font-size: 32px;
+  font-weight: 700;
+  fill: #050505;
+}
+
+.label {
+  font-size: 32px;
+  fill: #050505;
+}
+
+.small-label {
+  font-size: 25px;
+  fill: #050505;
+}
+
+.tiny-label {
+  font-size: 20px;
+  fill: #050505;
+}
+
+.example {
+  font-size: 18px;
+  fill: #404040;
+}
+
+.note {
+  font-size: 24px;
+  fill: #5f6570;
+}
+
+.axis-note {
+  font-size: 26px;
+  font-style: italic;
+  fill: #6b717d;
+}
+
+.blue-fill {
+  fill: #dcecff;
+}
+
+.cream-fill {
+  fill: #fff5d7;
+}
+
+.pink-fill {
+  fill: #ffe1e5;
+}
+
+.soft-fill {
+  fill: #eef5fb;
+}
+
+.box-stroke {
+  stroke: #d8d8d8;
+  stroke-width: 2;
+}
+
+.blue-stroke {
+  stroke: #1a92cf;
+  stroke-width: 8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.gold-stroke {
+  stroke: #d99a19;
+  stroke-width: 8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.thin-dark {
+  stroke: #1d2f56;
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.arrow {
+  stroke: #d7d7d7;
+  stroke-width: 18;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.thin-arrow {
+  stroke: #1d2f56;
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.divider {
+  stroke: #9b9b9b;
+  stroke-width: 7;
+  stroke-dasharray: 20 18;
+  stroke-linecap: round;
+}
