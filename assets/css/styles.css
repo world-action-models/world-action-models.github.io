@@ -1992,3 +1992,5 @@ body[data-density="compact"] .paper-card {
 .toolbar,
 .toolbar.is-stuck { background: var(--surface); }
 .filter-panel { background: var(--surface); }
+
+.site-footer .version-link { color: var(--accent-ink); font-weight: 700; }

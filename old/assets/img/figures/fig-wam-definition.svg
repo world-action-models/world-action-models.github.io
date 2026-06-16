@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">What makes a World Action Model</title>
+  <desc id="desc">A hand-drawn style diagram contrasting VLA, world model, and World Action Model definitions with shared notation.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8f9fb; }
+      .panel { fill: #ffffff; stroke: #d6dbe1; stroke-width: 3; }
+      .panel-blue { fill: #e8f2ff; stroke: #75a8da; stroke-width: 3; }
+      .panel-green { fill: #e8f5ef; stroke: #77bb99; stroke-width: 3; }
+      .panel-rust { fill: #fff0e8; stroke: #d08a64; stroke-width: 3; }
+      .panel-wam { fill: #fff8f3; stroke: #d08a64; stroke-width: 3; }
+      .chip { fill: #f1f4f7; stroke: #cfd6df; stroke-width: 2; }
+      .formula { fill: #ffffff; stroke: #cfd6df; stroke-width: 2; }
+      .ink { fill: #202124; font-family: "Comic Neue", "Comic Sans MS", ui-sans-serif, sans-serif; }
+      .muted { fill: #626973; font-family: "Comic Neue", "Comic Sans MS", ui-sans-serif, sans-serif; }
+      .rust { fill: #bd5b35; font-family: "Comic Neue", "Comic Sans MS", ui-sans-serif, sans-serif; }
+      .title { font-size: 44px; font-weight: 700; }
+      .subtitle { font-size: 23px; }
+      .label { font-size: 26px; font-weight: 700; }
+      .small { font-size: 20px; }
+      .tiny { font-size: 17px; }
+      .math { font-size: 23px; font-weight: 700; }
+      .legend-head { font-size: 20px; font-weight: 700; }
+      .legend-text { font-size: 17px; }
+      .dash { fill: none; stroke: #b8c0ca; stroke-width: 3; stroke-dasharray: 10 10; }
+      .shaft { fill: none; stroke: #9aa5b1; stroke-width: 7; stroke-linecap: butt; }
+      .shaft-blue { fill: none; stroke: #2f72bd; stroke-width: 6; stroke-linecap: butt; }
+      .shaft-green { fill: none; stroke: #2c8a5f; stroke-width: 6; stroke-linecap: butt; }
+      .shaft-rust { fill: none; stroke: #bd5b35; stroke-width: 6; stroke-linecap: butt; }
+      .thin { stroke-width: 5; }
+      .head { fill: #9aa5b1; }
+      .head-blue { fill: #2f72bd; }
+      .head-green { fill: #2c8a5f; }
+      .head-rust { fill: #bd5b35; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="900"/>
+
+  <text x="78" y="64" class="ink title">What makes a World Action Model?</text>
+  <text x="80" y="105" class="muted subtitle">A predicted future becomes a WAM only when it stays in the action path.</text>
+
+  <rect x="78" y="128" width="1444" height="84" rx="18" class="panel"/>
+  <text x="106" y="176" class="ink legend-head">Notation</text>
+  <rect x="300" y="146" width="64" height="42" rx="13" class="chip"/>
+  <text x="332" y="173" text-anchor="middle" class="ink math">o</text>
+  <text x="376" y="173" class="muted legend-text">observation</text>
+  <rect x="520" y="146" width="64" height="42" rx="13" class="chip"/>
+  <text x="552" y="173" text-anchor="middle" class="ink math">l</text>
+  <text x="596" y="173" class="muted legend-text">language or goal</text>
+  <rect x="790" y="146" width="64" height="42" rx="13" class="chip"/>
+  <text x="822" y="173" text-anchor="middle" class="ink math">a</text>
+  <text x="866" y="173" class="muted legend-text">action</text>
+  <rect x="1015" y="146" width="64" height="42" rx="13" class="chip"/>
+  <text x="1047" y="173" text-anchor="middle" class="ink math">o'</text>
+  <text x="1091" y="173" class="muted legend-text">future observation</text>
+  <rect x="1262" y="146" width="124" height="42" rx="13" class="formula"/>
+  <text x="1324" y="173" class="ink legend-head" text-anchor="middle">p(x | y)</text>
+  <text x="1446" y="162" class="muted legend-text" text-anchor="middle">conditional</text>
+  <text x="1446" y="184" class="muted legend-text" text-anchor="middle">model</text>
+
+  <rect x="82" y="250" width="420" height="216" rx="18" class="panel-blue"/>
+  <text x="112" y="294" class="ink label">Vision-Language-Action</text>
+  <text x="112" y="326" class="muted small">acts from the current context</text>
+  <rect x="126" y="352" width="132" height="50" rx="15" class="chip"/>
+  <text x="192" y="384" text-anchor="middle" class="ink math">o, l</text>
+  <path d="M 268 377 H 333" class="shaft-blue"/>
+  <polygon points="357,377 333,365 333,389" class="head-blue"/>
+  <rect x="366" y="352" width="86" height="50" rx="15" class="chip"/>
+  <text x="409" y="384" text-anchor="middle" class="ink math">a</text>
+  <rect x="128" y="408" width="324" height="42" rx="13" class="formula"/>
+  <text x="290" y="436" text-anchor="middle" class="ink math">p(a | o, l)</text>
+
+  <rect x="590" y="250" width="420" height="216" rx="18" class="panel-green"/>
+  <text x="620" y="294" class="ink label">World model</text>
+  <text x="620" y="326" class="muted small">predicts what happens next</text>
+  <rect x="634" y="352" width="150" height="50" rx="15" class="chip"/>
+  <text x="709" y="384" text-anchor="middle" class="ink math">o, a, l</text>
+  <path d="M 794 377 H 859" class="shaft-green"/>
+  <polygon points="883,377 859,365 859,389" class="head-green"/>
+  <rect x="892" y="352" width="82" height="50" rx="15" class="chip"/>
+  <text x="933" y="384" text-anchor="middle" class="ink math">o'</text>
+  <rect x="628" y="408" width="346" height="42" rx="13" class="formula"/>
+  <text x="801" y="436" text-anchor="middle" class="ink math">p(o' | o, a, l)</text>
+
+  <rect x="1098" y="250" width="420" height="216" rx="18" class="panel-rust"/>
+  <text x="1128" y="294" class="ink label">World Action Model</text>
+  <text x="1128" y="326" class="muted small">makes the future action-facing</text>
+  <rect x="1142" y="352" width="126" height="50" rx="15" class="chip"/>
+  <text x="1205" y="384" text-anchor="middle" class="ink math">o, l</text>
+  <path d="M 1278 377 H 1342" class="shaft-rust"/>
+  <polygon points="1366,377 1342,365 1342,389" class="head-rust"/>
+  <rect x="1376" y="344" width="102" height="66" rx="15" class="chip"/>
+  <text x="1427" y="373" text-anchor="middle" class="ink math">o', a</text>
+  <text x="1427" y="397" text-anchor="middle" class="muted tiny">joint path</text>
+  <rect x="1136" y="408" width="346" height="42" rx="13" class="formula"/>
+  <text x="1309" y="436" text-anchor="middle" class="ink math">p(o', a | o, l)</text>
+
+  <path d="M 130 500 H 1470" class="dash"/>
+  <text x="800" y="532" text-anchor="middle" class="muted small">Boundary: the predicted future must help produce, score, verify, or train action.</text>
+
+  <rect x="92" y="570" width="410" height="260" rx="18" class="panel-wam"/>
+  <text x="122" y="628" class="ink label">1. Predict then act</text>
+  <text x="122" y="660" class="muted small">future first, action second</text>
+  <rect x="145" y="680" width="304" height="42" rx="13" class="formula"/>
+  <text x="297" y="708" text-anchor="middle" class="ink math">p(o' | o, l)</text>
+  <path d="M 297 729 V 745" class="shaft-rust thin"/>
+  <polygon points="297,766 286,745 308,745" class="head-rust"/>
+  <rect x="145" y="768" width="304" height="42" rx="13" class="formula"/>
+  <text x="297" y="796" text-anchor="middle" class="ink math">p(a | o, o', l)</text>
+
+  <rect x="595" y="570" width="410" height="260" rx="18" class="panel-wam"/>
+  <text x="625" y="628" class="ink label">2. Score actions</text>
+  <text x="625" y="660" class="muted small">candidate action, predicted consequence</text>
+  <rect x="635" y="688" width="130" height="48" rx="13" class="chip"/>
+  <text x="700" y="719" text-anchor="middle" class="ink math">a</text>
+  <path d="M 776 712 H 823" class="shaft-rust thin"/>
+  <polygon points="844,712 823,701 823,723" class="head-rust"/>
+  <rect x="855" y="688" width="120" height="48" rx="13" class="chip"/>
+  <text x="915" y="719" text-anchor="middle" class="ink math">o'</text>
+  <rect x="642" y="758" width="316" height="42" rx="13" class="formula"/>
+  <text x="800" y="786" text-anchor="middle" class="ink math">p(o' | o, a, l)</text>
+
+  <rect x="1098" y="570" width="410" height="260" rx="18" class="panel-wam"/>
+  <text x="1128" y="628" class="ink label">3. Joint prediction</text>
+  <text x="1128" y="660" class="muted small">future and action in one coupled model</text>
+  <rect x="1160" y="690" width="286" height="56" rx="15" class="formula"/>
+  <text x="1303" y="726" text-anchor="middle" class="ink math">p(o', a | o, l)</text>
+  <path d="M 1303 754 V 764" class="shaft-rust thin"/>
+  <polygon points="1303,784 1292,764 1314,764" class="head-rust"/>
+  <text x="1303" y="816" text-anchor="middle" class="muted small">one shared action-facing path</text>
+
+  <rect x="92" y="842" width="1416" height="42" rx="14" class="panel"/>
+  <text x="800" y="870" text-anchor="middle" class="muted small">Not WAM: a future head discarded before action use, or a simulator used only outside the policy path.</text>
+</svg>
