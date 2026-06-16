@@ -66,7 +66,7 @@
         <p>
           In the survey, a World Action Model begins when a predicted future becomes action-facing. The future may be
           rendered pixels, latents, features, flow, affordance maps, audio, or tokens. What matters is that the predicted
-          future helps produce, score, verify, or train the action path.
+          future helps produce, score, or train the action path.
         </p>
       </div>
 
@@ -100,7 +100,7 @@
 
   <article class="dv-scene-card is-wam">
     <h4 class="dv-scene-name">World Action Model</h4>
-    <p class="dv-scene-sub">the predicted future helps produce, score, verify, or train the action</p>
+    <p class="dv-scene-sub">the predicted future helps produce, score, or train the action</p>
     <svg class="dv-scene-svg" viewBox="0 0 340 122" role="img" aria-label="A camera viewfinder shows a gripper above a block (observation o and l). An arrow leads to an accent thought bubble showing the block grasped and lifted (predicted future o-prime). A highlighted accent arrow then leads from that predicted future into a joystick glyph (action a). The predicted future shapes the action, so it is action-facing."><g transform="translate(20,8)"><rect class="dvs-frame" x="0" y="0" width="80" height="80" rx="13"/><path class="dvs-cam" d="M9 20 V9 H20"/><path class="dvs-cam" d="M60 9 H71 V20"/><path class="dvs-cam" d="M9 60 V71 H20"/><path class="dvs-cam" d="M60 71 H71 V60"/><g class="dvs-scene"><line class="dvs-ground" x1="14" y1="66" x2="66" y2="66"/><rect class="dvs-box" x="31" y="48" width="18" height="17" rx="3"/><rect class="dvs-box-top" x="31" y="46" width="18" height="5" rx="2.5"/><rect class="dvs-arm" x="36" y="6" width="8" height="16" rx="3"/><rect class="dvs-arm" x="24" y="20" width="32" height="7" rx="3.5"/><path class="dvs-claw" d="M29 27 V42"/><path class="dvs-claw" d="M51 27 V42"/></g></g><text class="dvs-label" x="60" y="110">o, l</text><path class="dvs-edge" d="M100 48 H121"/><path class="dvs-edge-head" d="M130 48 L121 43 L121 53 Z"/><g transform="translate(130,6)"><rect class="dvs-bubble dvs-bubble--wam" x="0" y="0" width="80" height="80" rx="24"/><g class="dvs-scene dvs-scene--accent"><line class="dvs-ground" x1="14" y1="66" x2="66" y2="66"/><rect class="dvs-box" x="32" y="28" width="16" height="16" rx="3"/><rect class="dvs-box-top" x="32" y="26" width="16" height="5" rx="2.5"/><rect class="dvs-arm" x="36" y="6" width="8" height="14" rx="3"/><rect class="dvs-arm" x="24" y="18" width="32" height="7" rx="3.5"/><path class="dvs-claw" d="M33 25 V38"/><path class="dvs-claw" d="M47 25 V38"/></g></g><circle class="dvs-bubble-dot dvs-bubble--wam" cx="138" cy="92" r="3.4"/><circle class="dvs-bubble-dot dvs-bubble--wam" cx="130" cy="99" r="2.2"/><text class="dvs-label dvs-label--wam" x="170" y="110">o&#8242;</text><path class="dvs-edge dvs-edge--facing" d="M210 48 H231"/><path class="dvs-edge-head dvs-edge-head--facing" d="M240 48 L231 43 L231 53 Z"/><g transform="translate(240,8)"><rect class="dvs-frame dvs-act-frame dvs-act-frame--wam" x="0" y="0" width="80" height="80" rx="13"/><g class="dvs-joy dvs-joy--accent"><ellipse class="dvs-joy-base" cx="40" cy="60" rx="22" ry="7"/><path class="dvs-joy-shaft" d="M40 58 L53 33"/><circle class="dvs-joy-knob" cx="54" cy="30" r="9"/><path class="dvs-joy-tick" d="M66 25 q5 6 0 12"/><path class="dvs-joy-tick" d="M71 22 q8 9 0 18"/></g></g><text class="dvs-label dvs-label--act" x="280" y="110">a</text></svg>
     <p class="dv-scene-f">p(o&#8242;, a | o, l)</p>
   </article>
@@ -109,7 +109,7 @@
 <p class="dv-scene-caption">Three different shapes, three different things: a <strong>camera frame</strong> = what it observes now (o), a <strong>thought bubble</strong> = the future it predicts (o&#8242;), a <strong>joystick</strong> = the action it outputs (a). A world model stops at the bubble; a WAM routes that bubble forward, in accent, into the action.</p>
               </div>
 
-            <p class="def-rule">Boundary: the predicted future must help produce, score, verify, or train action.</p>
+            <p class="def-rule">Boundary: the predicted future must help produce, score, or train action.</p>
 
             <div class="def-arch">
               <div class="def-box def-box--wam">
