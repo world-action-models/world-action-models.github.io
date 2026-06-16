@@ -489,6 +489,41 @@ function renderList() {
   selectors.list.append(frag);
   toggleEmpty(filtered.length === 0);
   selectors.resultCount.textContent = `${number(filtered.length)} ${filtered.length === 1 ? "paper" : "papers"}`;
+  layoutMasonry();
+}
+
+/* true masonry: place each card (in sorted order) into the currently shortest
+   column, so cards keep their natural height and pack tightly while the top row
+   still reads left-to-right in sort order */
+function layoutMasonry() {
+  const list = selectors.list;
+  if (!list || list.hidden) return;
+  const total = list.clientWidth;
+  if (!total) return;
+  const rootPx = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+  const gap = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--space-sm")) || 12;
+  const colMin = 18 * rootPx;
+  const cols = Math.max(1, Math.floor((total + gap) / (colMin + gap)));
+  const colWidth = (total - (cols - 1) * gap) / cols;
+  const cards = [];
+  for (const node of list.children) {
+    if (node.nodeType === 1 && !node.hidden && node.classList.contains("paper-card")) {
+      node.style.width = `${colWidth}px`;
+      cards.push(node);
+    }
+  }
+  const colH = new Array(cols).fill(0);
+  for (const card of cards) {
+    let c = 0;
+    for (let i = 1; i < cols; i++) {
+      if (colH[i] < colH[c] - 0.5) c = i;
+    }
+    const x = Math.round(c * (colWidth + gap));
+    const y = Math.round(colH[c]);
+    card.style.transform = `translate(${x}px, ${y}px)`;
+    colH[c] += card.offsetHeight + gap;
+  }
+  list.style.height = cards.length ? `${Math.max(...colH) - gap}px` : "";
 }
 
 /* ---------- toolbar ---------- */
@@ -828,7 +863,15 @@ function bindEvents() {
     try { localStorage.setItem("wam-density", state.density); } catch (_) { /* ignore */ }
     applyDensity();
     updateDensityButtons();
+    layoutMasonry();
   });
+
+  let masonryTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(masonryTimer);
+    masonryTimer = setTimeout(layoutMasonry, 120);
+  });
+  window.addEventListener("load", layoutMasonry);
 
   selectors.chips.addEventListener("click", (e) => {
     const b = e.target.closest(".chip");

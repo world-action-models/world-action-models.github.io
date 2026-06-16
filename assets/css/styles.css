@@ -1480,17 +1480,17 @@ body.filters-open .filter-panel {
   cursor: pointer;
 }
 
-/* paper list + cards — true masonry via CSS columns (cards keep natural height, pack tightly) */
+/* paper list + cards — true masonry: JS positions cards absolutely so they keep
+   their natural heights and pack tightly, while the placement order (shortest
+   column first) keeps the sorted order reading left-to-right across the top */
 .paper-list {
-  /* row-major grid so a sorted list reads left-to-right, top-to-bottom
-     (CSS columns filled top-to-bottom per column, fighting the chosen sort) */
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-  gap: var(--space-sm);
-  align-items: start;
+  position: relative;
 }
 
 .paper-card {
+  position: absolute;
+  top: 0;
+  left: 0;
   min-width: 0;
   padding: var(--space-md);
   transition: border-color 150ms ease, box-shadow 150ms ease;
