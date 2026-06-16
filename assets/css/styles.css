@@ -400,10 +400,12 @@ h3,
 }
 
 h1 {
-  max-width: 24ch;
   margin: 0 auto var(--space-2xs);
-  font-size: var(--text-h1);
-  line-height: 1.08;
+  /* keep the title on ONE line in every browser (24ch wrapped in Safari),
+     scaling down on narrow screens so it never overflows */
+  font-size: clamp(1.05rem, 5.3vw, 3.05rem);
+  line-height: 1.1;
+  white-space: nowrap;
 }
 
 .hero-subtitle {
