@@ -4,38 +4,48 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Academic project homepage and interactive paper explorer for the World Action Models survey.">
-  <meta name="theme-color" content="#f7f8fa">
-  <title>World Action Models: A Survey</title>
+  <meta name="theme-color" content="#ffffff">
+  <title>World Action Model: A Survey</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/img/figures/hero-wam-future.png" as="image">
   <link rel="preload" href="assets/img/figures/fig-wam-timeline-themed.webp" as="image">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#papers">Skip to paper list</a>
   <aside class="side-nav" aria-label="Page navigation">
-    <a class="nav-title" href="#top" aria-label="World Action Models survey home">
-      <span>WAM</span>
-      <strong>Survey</strong>
-    </a>
-    <nav>
-      <a href="#overview">Overview</a>
-      <a href="#definition">Definition</a>
-      <a href="#timeline">Timeline</a>
-      <a href="#papers">Paper list</a>
-      <a href="#metadata">Metadata</a>
-    </nav>
+    <div class="nav-inner">
+      <a class="nav-title" href="#top" aria-label="World Action Models survey home">
+        <span>WAM</span>
+        <strong>Survey</strong>
+      </a>
+      <nav>
+        <a href="#overview">Overview</a>
+        <a href="#definition">Definition</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#papers">Paper list</a>
+        <a href="#metadata">Metadata</a>
+      </nav>
+    </div>
   </aside>
 
   <main id="top" class="page-shell">
     <section class="paper-hero" id="overview" aria-labelledby="paper-title">
       <div class="hero-text academic-title-block">
-        <h1 id="paper-title">World Action Models: A Survey from World Models to Embodied Control</h1>
+        <h1 id="paper-title">World Action Model: A Survey</h1>
+        <p class="hero-subtitle">Dream less Act more</p>
         <p class="author-list">Anonymous Authors</p>
         <p class="affiliation-line">National University of Singapore (NUS)</p>
         <p class="hero-summary">
           A structured survey of predictive-action models that make a forecast of the future available to action.
           The homepage mirrors the paper’s two central views: a philosophy-level taxonomy and a component-level anatomy.
         </p>
+        <div class="hero-links">
+          <a class="hero-link hero-link--primary" href="#" aria-label="Paper on arXiv (link coming soon)">arXiv <span aria-hidden="true">↗</span></a>
+          <a class="hero-link" href="#" aria-label="PDF (link coming soon)">PDF</a>
+          <a class="hero-link" href="#" aria-label="Code on GitHub (link coming soon)">GitHub</a>
+          <a class="hero-link" href="#" aria-label="BibTeX (link coming soon)">BibTeX</a>
+        </div>
         <dl class="paper-meta-list">
           <div>
             <dt>Paper status</dt>
@@ -62,7 +72,68 @@
 
       <div class="definition-grid">
         <figure class="embedded-figure definition-figure">
-          <img src="assets/img/figures/fig-wam-definition.svg" width="1600" height="900" alt="Definition diagram contrasting VLA, world model, and World Action Model.">
+          <div class="def-body">
+            <p class="def-legend">
+              <span><b>o</b> observation</span>
+              <span><b>l</b> language or goal</span>
+              <span><b>a</b> action</span>
+              <span><b>o'</b> future observation</span>
+              <span><b>p(x|y)</b> conditional model</span>
+            </p>
+
+            <div class="def-viz-panel" data-viz="scene">
+<div class="dv-scene-grid">
+
+  <article class="dv-scene-card">
+    <h4 class="dv-scene-name">Vision-Language-Action</h4>
+    <p class="dv-scene-sub">acts from the current context &mdash; no predicted future</p>
+    <svg class="dv-scene-svg" viewBox="0 0 340 122" role="img" aria-label="A camera viewfinder shows the current scene: a gripper above a block on a table (observation o and l). A direct arrow leads to a joystick glyph (action a). The action is produced straight from what is observed, with no predicted future."><g transform="translate(75,8)"><rect class="dvs-frame" x="0" y="0" width="80" height="80" rx="13"/><path class="dvs-cam" d="M9 20 V9 H20"/><path class="dvs-cam" d="M60 9 H71 V20"/><path class="dvs-cam" d="M9 60 V71 H20"/><path class="dvs-cam" d="M60 71 H71 V60"/><g class="dvs-scene"><line class="dvs-ground" x1="14" y1="66" x2="66" y2="66"/><rect class="dvs-box" x="31" y="48" width="18" height="17" rx="3"/><rect class="dvs-box-top" x="31" y="46" width="18" height="5" rx="2.5"/><rect class="dvs-arm" x="36" y="6" width="8" height="16" rx="3"/><rect class="dvs-arm" x="24" y="20" width="32" height="7" rx="3.5"/><path class="dvs-claw" d="M29 27 V42"/><path class="dvs-claw" d="M51 27 V42"/></g></g><text class="dvs-label" x="115" y="110">o, l</text><path class="dvs-edge" d="M155 48 H176"/><path class="dvs-edge-head" d="M185 48 L176 43 L176 53 Z"/><g transform="translate(185,8)"><rect class="dvs-frame dvs-act-frame" x="0" y="0" width="80" height="80" rx="13"/><g class="dvs-joy"><ellipse class="dvs-joy-base" cx="40" cy="60" rx="22" ry="7"/><path class="dvs-joy-shaft" d="M40 58 L53 33"/><circle class="dvs-joy-knob" cx="54" cy="30" r="9"/><path class="dvs-joy-tick" d="M66 25 q5 6 0 12"/><path class="dvs-joy-tick" d="M71 22 q8 9 0 18"/></g></g><text class="dvs-label dvs-label--act" x="225" y="110">a</text></svg>
+    <p class="dv-scene-f">p(a | o, l)</p>
+  </article>
+
+  <article class="dv-scene-card">
+    <h4 class="dv-scene-name">World model</h4>
+    <p class="dv-scene-sub">a what-if simulator: action in, future out &mdash; emits no action</p>
+    <svg class="dv-scene-svg" viewBox="0 0 340 122" role="img" aria-label="A camera viewfinder shows a gripper above a block (observation o and l). A small joystick (a candidate action a) is fed in as an input, and the arrow leads to a thought bubble showing the block grasped and lifted (predicted future o-prime). The world model takes the action as an input and outputs the future; it emits no action of its own."><g transform="translate(58,8)"><rect class="dvs-frame" x="0" y="0" width="80" height="80" rx="13"/><path class="dvs-cam" d="M9 20 V9 H20"/><path class="dvs-cam" d="M60 9 H71 V20"/><path class="dvs-cam" d="M9 60 V71 H20"/><path class="dvs-cam" d="M60 71 H71 V60"/><g class="dvs-scene"><line class="dvs-ground" x1="14" y1="66" x2="66" y2="66"/><rect class="dvs-box" x="31" y="48" width="18" height="17" rx="3"/><rect class="dvs-box-top" x="31" y="46" width="18" height="5" rx="2.5"/><rect class="dvs-arm" x="36" y="6" width="8" height="16" rx="3"/><rect class="dvs-arm" x="24" y="20" width="32" height="7" rx="3.5"/><path class="dvs-claw" d="M29 27 V42"/><path class="dvs-claw" d="M51 27 V42"/></g></g><text class="dvs-label" x="98" y="110">o, l</text><path class="dvs-edge" d="M138 48 H191"/><path class="dvs-edge-head" d="M200 48 L191 43 L191 53 Z"/><g transform="translate(149,-2) scale(0.5)"><g class="dvs-joy"><ellipse class="dvs-joy-base" cx="40" cy="60" rx="22" ry="7"/><path class="dvs-joy-shaft" d="M40 58 L53 33"/><circle class="dvs-joy-knob" cx="54" cy="30" r="9"/></g></g><path class="dvs-feed" d="M169 32 V45"/><path class="dvs-feed-head" d="M169 49 L165 42 L173 42 Z"/><text class="dvs-label dvs-feed-label" x="191" y="14">a</text><g transform="translate(200,6)"><rect class="dvs-bubble" x="0" y="0" width="80" height="80" rx="24"/><g class="dvs-scene dvs-scene--ghost"><line class="dvs-ground" x1="14" y1="66" x2="66" y2="66"/><rect class="dvs-box" x="32" y="28" width="16" height="16" rx="3"/><rect class="dvs-box-top" x="32" y="26" width="16" height="5" rx="2.5"/><rect class="dvs-arm" x="36" y="6" width="8" height="14" rx="3"/><rect class="dvs-arm" x="24" y="18" width="32" height="7" rx="3.5"/><path class="dvs-claw" d="M33 25 V38"/><path class="dvs-claw" d="M47 25 V38"/></g></g><circle class="dvs-bubble-dot" cx="208" cy="92" r="3.4"/><circle class="dvs-bubble-dot" cx="200" cy="99" r="2.2"/><text class="dvs-label" x="240" y="110">o&#8242;</text></svg>
+    <p class="dv-scene-f">p(o&#8242; | o, a, l)</p>
+  </article>
+
+  <article class="dv-scene-card is-wam">
+    <h4 class="dv-scene-name">World Action Model</h4>
+    <p class="dv-scene-sub">the predicted future helps produce, score, verify, or train the action</p>
+    <svg class="dv-scene-svg" viewBox="0 0 340 122" role="img" aria-label="A camera viewfinder shows a gripper above a block (observation o and l). An arrow leads to an accent thought bubble showing the block grasped and lifted (predicted future o-prime). A highlighted accent arrow then leads from that predicted future into a joystick glyph (action a). The predicted future shapes the action, so it is action-facing."><g transform="translate(20,8)"><rect class="dvs-frame" x="0" y="0" width="80" height="80" rx="13"/><path class="dvs-cam" d="M9 20 V9 H20"/><path class="dvs-cam" d="M60 9 H71 V20"/><path class="dvs-cam" d="M9 60 V71 H20"/><path class="dvs-cam" d="M60 71 H71 V60"/><g class="dvs-scene"><line class="dvs-ground" x1="14" y1="66" x2="66" y2="66"/><rect class="dvs-box" x="31" y="48" width="18" height="17" rx="3"/><rect class="dvs-box-top" x="31" y="46" width="18" height="5" rx="2.5"/><rect class="dvs-arm" x="36" y="6" width="8" height="16" rx="3"/><rect class="dvs-arm" x="24" y="20" width="32" height="7" rx="3.5"/><path class="dvs-claw" d="M29 27 V42"/><path class="dvs-claw" d="M51 27 V42"/></g></g><text class="dvs-label" x="60" y="110">o, l</text><path class="dvs-edge" d="M100 48 H121"/><path class="dvs-edge-head" d="M130 48 L121 43 L121 53 Z"/><g transform="translate(130,6)"><rect class="dvs-bubble dvs-bubble--wam" x="0" y="0" width="80" height="80" rx="24"/><g class="dvs-scene dvs-scene--accent"><line class="dvs-ground" x1="14" y1="66" x2="66" y2="66"/><rect class="dvs-box" x="32" y="28" width="16" height="16" rx="3"/><rect class="dvs-box-top" x="32" y="26" width="16" height="5" rx="2.5"/><rect class="dvs-arm" x="36" y="6" width="8" height="14" rx="3"/><rect class="dvs-arm" x="24" y="18" width="32" height="7" rx="3.5"/><path class="dvs-claw" d="M33 25 V38"/><path class="dvs-claw" d="M47 25 V38"/></g></g><circle class="dvs-bubble-dot dvs-bubble--wam" cx="138" cy="92" r="3.4"/><circle class="dvs-bubble-dot dvs-bubble--wam" cx="130" cy="99" r="2.2"/><text class="dvs-label dvs-label--wam" x="170" y="110">o&#8242;</text><path class="dvs-edge dvs-edge--facing" d="M210 48 H231"/><path class="dvs-edge-head dvs-edge-head--facing" d="M240 48 L231 43 L231 53 Z"/><g transform="translate(240,8)"><rect class="dvs-frame dvs-act-frame dvs-act-frame--wam" x="0" y="0" width="80" height="80" rx="13"/><g class="dvs-joy dvs-joy--accent"><ellipse class="dvs-joy-base" cx="40" cy="60" rx="22" ry="7"/><path class="dvs-joy-shaft" d="M40 58 L53 33"/><circle class="dvs-joy-knob" cx="54" cy="30" r="9"/><path class="dvs-joy-tick" d="M66 25 q5 6 0 12"/><path class="dvs-joy-tick" d="M71 22 q8 9 0 18"/></g></g><text class="dvs-label dvs-label--act" x="280" y="110">a</text></svg>
+    <p class="dv-scene-f">p(o&#8242;, a | o, l)</p>
+  </article>
+
+</div>
+<p class="dv-scene-caption">Three different shapes, three different things: a <strong>camera frame</strong> = what it observes now (o), a <strong>thought bubble</strong> = the future it predicts (o&#8242;), a <strong>joystick</strong> = the action it outputs (a). A world model stops at the bubble; a WAM routes that bubble forward, in accent, into the action.</p>
+              </div>
+
+            <p class="def-rule">Boundary: the predicted future must help produce, score, verify, or train action.</p>
+
+            <div class="def-arch">
+              <div class="def-box def-box--wam">
+                <span class="def-name">1 &middot; Predict then act</span>
+                <span class="def-sub">future first, action second</span>
+                <span class="def-f">p(o' | o, l)</span>
+                <span class="def-f">p(a | o, o', l)</span>
+              </div>
+              <div class="def-box def-box--wam">
+                <span class="def-name">2 &middot; Score actions</span>
+                <span class="def-sub">candidate action, predicted consequence</span>
+                <span class="def-sig"><b class="tok">a</b> <i class="def-to">&rarr;</i> <b class="tok">o'</b></span>
+                <span class="def-f">p(o' | o, a, l)</span>
+              </div>
+              <div class="def-box def-box--wam">
+                <span class="def-name">3 &middot; Joint prediction</span>
+                <span class="def-sub">future and action in one coupled model</span>
+                <span class="def-f">p(o', a | o, l)</span>
+                <span class="def-sub">one shared action-facing path</span>
+              </div>
+            </div>
+
+            <p class="def-rule def-rule--neg">Not WAM: a future head discarded before action use, or a simulator used only outside the policy path.</p>
+          </div>
           <figcaption>A simplified Section 2 definition: VLA predicts action, world model predicts future, and WAM links future prediction to action.</figcaption>
         </figure>
 
@@ -93,12 +164,12 @@
         </p>
       </div>
       <figure class="embedded-figure timeline-figure">
-        <img src="assets/img/figures/fig-wam-timeline-themed.webp" width="1400" height="788" alt="Timeline of representative World Action Models grouped by design philosophy.">
-        <figcaption>Timeline figure from the current survey, recoloured to match the homepage surface.</figcaption>
+        <div class="timeline" id="timeline-plot" role="img" aria-label="Timeline of World Action Model papers by first arXiv date, grouped by design philosophy"></div>
+        <figcaption>Generated from the paper collection — each mark is a paper at its first arXiv date, placed in its design-philosophy lane.</figcaption>
       </figure>
     </section>
 
-    <section class="content-section explorer-section" id="papers" aria-labelledby="papers-title">
+    <section class="content-section explorer-section" id="papers" tabindex="-1" aria-labelledby="papers-title">
       <div class="section-heading wide">
         <p class="eyebrow">Fine-grained paper list</p>
         <h2 id="papers-title">Explore papers by taxonomy and component anatomy.</h2>
@@ -108,74 +179,89 @@
         </p>
       </div>
 
+      <figure class="matrix-wrap" aria-labelledby="matrix-title">
+        <figcaption class="matrix-head">
+          <p class="mini-label">Taxonomy × substrate</p>
+          <h3 id="matrix-title">Orthogonal map</h3>
+        </figcaption>
+        <div class="matrix" id="taxonomy-matrix" role="group" aria-label="Papers by design philosophy and predictive substrate"></div>
+      </figure>
+
       <div class="explorer-shell">
-        <aside class="filter-panel" aria-label="Paper filters">
-          <div class="control-block">
-            <label for="paper-search">Search</label>
-            <input id="paper-search" type="search" autocomplete="off" placeholder="Title, acronym, method">
+        <aside class="filter-panel" id="filter-panel" aria-label="Paper filters">
+          <div class="filter-panel__head">
+            <p class="mini-label">Filters</p>
+            <button type="button" class="sheet-close" id="filters-close" aria-label="Close filters"><span aria-hidden="true">×</span></button>
           </div>
 
           <div class="control-block">
-            <label for="paper-sort">Sort</label>
-            <select id="paper-sort">
-              <option value="recent">Newest first</option>
-              <option value="citations">Most cited</option>
-              <option value="oldest">Oldest first</option>
-              <option value="title">Title A to Z</option>
-            </select>
+            <div class="control-label" id="cl-philosophy">Design philosophy</div>
+            <div class="segmented" role="group" aria-labelledby="cl-philosophy" data-filter-group="philosophy"></div>
+          </div>
+
+          <p class="mini-label filter-subhead">Component anatomy axes</p>
+
+          <div class="control-block">
+            <div class="control-label" id="cl-substrate">Predictive substrate</div>
+            <div class="segmented compact" role="group" aria-labelledby="cl-substrate" data-filter-group="substrateGroup"></div>
+          </div>
+          <div class="control-block">
+            <div class="control-label" id="cl-backbone">Backbone</div>
+            <div class="segmented compact" role="group" aria-labelledby="cl-backbone" data-filter-group="backbone"></div>
+          </div>
+          <div class="control-block">
+            <div class="control-label" id="cl-coupling">Action coupling</div>
+            <div class="segmented compact" role="group" aria-labelledby="cl-coupling" data-filter-group="coupling"></div>
+          </div>
+          <div class="control-block">
+            <div class="control-label" id="cl-deployment">Deployment</div>
+            <div class="segmented compact" role="group" aria-labelledby="cl-deployment" data-filter-group="deployment"></div>
           </div>
 
           <div class="control-block">
-            <div class="control-label">Design philosophy</div>
-            <div class="segmented" data-filter-group="philosophy"></div>
+            <div class="control-label" id="cl-density">Density</div>
+            <div class="segmented" role="group" aria-labelledby="cl-density" id="density-toggle"></div>
           </div>
-
-          <details class="axis-details" open>
-            <summary>Component anatomy axes</summary>
-            <div class="control-block">
-              <div class="control-label">Predictive substrate</div>
-              <div class="segmented compact" data-filter-group="substrateGroup"></div>
-            </div>
-            <div class="control-block">
-              <div class="control-label">Backbone</div>
-              <div class="segmented compact" data-filter-group="backbone"></div>
-            </div>
-            <div class="control-block">
-              <div class="control-label">Action coupling</div>
-              <div class="segmented compact" data-filter-group="coupling"></div>
-            </div>
-            <div class="control-block">
-              <div class="control-label">Deployment</div>
-              <div class="segmented compact" data-filter-group="deployment"></div>
-            </div>
-          </details>
 
           <button class="clear-button" type="button" id="clear-filters"><span aria-hidden="true">×</span> Clear filters</button>
         </aside>
 
         <div class="papers-workspace">
-          <div class="matrix-shell" aria-labelledby="matrix-title">
-            <div>
-              <p class="mini-label">Taxonomy × substrate</p>
-              <h3 id="matrix-title">Orthogonal map</h3>
+          <div class="toolbar" id="toolbar">
+            <div class="toolbar__row">
+              <div class="result-meta">
+                <span class="mini-label">Results</span>
+                <strong id="result-count" aria-live="polite">0 papers</strong>
+              </div>
+              <div class="search-block">
+                <label class="sr-only" for="paper-search">Search</label>
+                <input id="paper-search" type="search" autocomplete="off" inputmode="search" enterkeyhint="search" placeholder="Title, acronym, method">
+                <button type="button" class="search-clear" id="search-clear" aria-label="Clear search" hidden><span aria-hidden="true">×</span></button>
+              </div>
+              <div class="sort-block">
+                <label class="sr-only" for="paper-sort">Sort</label>
+                <select id="paper-sort">
+                  <option value="recent">Newest first</option>
+                  <option value="citations">Most cited</option>
+                  <option value="oldest">Oldest first</option>
+                  <option value="title">Title A to Z</option>
+                </select>
+              </div>
+              <button type="button" class="filters-btn" id="filters-open" aria-haspopup="dialog" aria-expanded="false">
+                Filters <span class="filters-count" id="filters-count" hidden></span>
+              </button>
+              <div class="result-meta meta-updated">
+                <span class="mini-label">Metadata</span>
+                <strong id="metadata-date">Updating</strong>
+              </div>
             </div>
-            <div class="matrix" id="taxonomy-matrix"></div>
+            <div class="toolbar__chips" id="active-chips" aria-label="Active filters"></div>
           </div>
 
-          <div class="result-bar">
-            <div>
-              <span class="mini-label">Results</span>
-              <strong id="result-count">0 papers</strong>
-            </div>
-            <div>
-              <span class="mini-label">Metadata</span>
-              <strong id="metadata-date">Updating</strong>
-            </div>
-          </div>
-
-          <div class="paper-list" id="paper-list" aria-live="polite"></div>
+          <div class="paper-list" id="paper-list"></div>
         </div>
       </div>
+      <div class="sheet-backdrop" id="sheet-backdrop" hidden></div>
     </section>
 
     <section class="content-section metadata-section" id="metadata" aria-labelledby="metadata-title">
