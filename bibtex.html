@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BibTeX citation for the World Action Models survey.">
+  <meta name="theme-color" content="#ffffff">
+  <title>BibTeX | World Action Model: A Survey</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css?v=3">
+</head>
+<body>
+  <a class="skip-link" href="#citation">Skip to citation</a>
+  <aside class="side-nav" aria-label="Page navigation">
+    <div class="nav-inner">
+      <a class="nav-title" href="index.html#top" aria-label="World Action Model survey home">
+        <span class="wm">W<span class="wm-a">A</span>M</span>
+        <span class="wm-sub">Survey</span>
+      </a>
+      <nav>
+        <a href="index.html#overview">Overview</a>
+        <a href="index.html#definition">Definition</a>
+        <a href="index.html#timeline">Timeline</a>
+        <a href="index.html#papers">Paper list</a>
+        <a href="index.html#metadata">Metadata</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main id="citation" class="page-shell citation-page">
+    <section class="content-section citation-section" aria-labelledby="citation-title">
+      <div class="section-heading">
+        <p class="eyebrow">Citation</p>
+        <h1 id="citation-title">BibTeX</h1>
+        <p>Use this BibTeX entry to cite the survey.</p>
+      </div>
+
+      <article class="citation-card">
+        <div class="citation-card-head">
+          <div>
+            <h2>World Action Models: A Survey</h2>
+            <p>Dream Less, Act More</p>
+          </div>
+          <button class="copy-button" type="button" data-copy-target="survey-bibtex" aria-describedby="copy-status">Copy</button>
+        </div>
+
+        <details class="bibtex-details" open>
+          <summary>BibTeX entry</summary>
+          <pre class="bibtex-block"><code id="survey-bibtex">@article{wam_survey_2026,
+  title   = {World Action Models: A Survey},
+  author  = {Shen, Qiuhong and Zhang, Shihua and Liao, Yue and Li, Qi and
+             Tan, Zhenxiong and Wang, Shizun and Yan, Shuicheng and Wang, Xinchao},
+  year    = {2026},
+  note    = {Dream Less, Act More},
+  url     = {https://world-action-models.github.io/}
+}</code></pre>
+        </details>
+
+        <p id="copy-status" class="copy-status" aria-live="polite"></p>
+      </article>
+
+      <p class="citation-back"><a href="index.html#overview">Back to project page</a></p>
+    </section>
+  </main>
+
+  <script>
+    const copyButton = document.querySelector("[data-copy-target]");
+    const copyStatus = document.querySelector("#copy-status");
+
+    async function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+        return;
+      }
+
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.inset = "0 auto auto 0";
+      textarea.style.opacity = "0";
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      textarea.remove();
+    }
+
+    copyButton?.addEventListener("click", async () => {
+      const target = document.getElementById(copyButton.dataset.copyTarget);
+      if (!target) return;
+
+      try {
+        await copyText(target.textContent.trim());
+        copyButton.textContent = "Copied";
+        copyStatus.textContent = "BibTeX copied.";
+        window.setTimeout(() => {
+          copyButton.textContent = "Copy";
+          copyStatus.textContent = "";
+        }, 1800);
+      } catch {
+        copyStatus.textContent = "Copy failed. Select the BibTeX text manually.";
+      }
+    });
+  </script>
+</body>
+</html>

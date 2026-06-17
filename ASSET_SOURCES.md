@@ -10,8 +10,8 @@ All deployed assets are local copies so the GitHub Pages repository is self-cont
 
 ## Citation
 
-- `wam-survey-nus.bib`
-  - Homepage BibTeX entry for citing the survey.
+- `bibtex.html`
+  - Local citation page with a fold/unfold BibTeX entry and copy button.
   - Linked from the homepage BibTeX button.
 
 ## Overview Hero Background
