@@ -1789,14 +1789,14 @@ body[data-density="compact"] .paper-card {
 }
 
 .visitor-section {
-  width: min(var(--content-max), 100% - 2 * var(--gutter));
-  margin-inline: auto;
-  padding: 0 0 var(--space-xl);
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .visitor-map {
-  width: min(420px, 100%);
-  margin-inline: auto;
+  width: 300px;
+  margin: 40px auto 60px;
   overflow: hidden;
   text-align: center;
   opacity: 0.9;
@@ -1819,7 +1819,7 @@ body[data-density="compact"] .paper-card {
 }
 
 .visitor-map #mapmyvisitors-widget {
-  width: min(420px, 100%) !important;
+  width: 300px !important;
   margin-inline: auto !important;
 }
 
