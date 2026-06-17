@@ -1788,6 +1788,41 @@ body[data-density="compact"] .paper-card {
   color: var(--ink-soft);
 }
 
+.visitor-section {
+  width: min(var(--content-max), 100% - 2 * var(--gutter));
+  margin-inline: auto;
+  padding: 0 0 var(--space-xl);
+}
+
+.visitor-map {
+  width: min(420px, 100%);
+  margin-inline: auto;
+  overflow: hidden;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.visitor-map iframe,
+.visitor-map img,
+.visitor-map object,
+.visitor-map embed,
+.visitor-map canvas {
+  display: inline-block;
+  max-width: 100% !important;
+  height: auto;
+}
+
+.visitor-map #mapmyvisitors-widget,
+.visitor-map .mapmyvisitors-map-container,
+.visitor-map .mapmyvisitors-map {
+  max-width: 100% !important;
+}
+
+.visitor-map #mapmyvisitors-widget {
+  width: min(420px, 100%) !important;
+  margin-inline: auto !important;
+}
+
 .site-footer {
   min-height: 70px;
   display: flex;
