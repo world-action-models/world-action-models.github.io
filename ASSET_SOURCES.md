@@ -2,6 +2,12 @@
 
 All deployed assets are local copies so the GitHub Pages repository is self-contained.
 
+## Survey PDF
+
+- `wam-survey-nus.pdf`
+  - Copied from `../../our-wam-survey/main.pdf`.
+  - Linked from the homepage PDF button.
+
 ## Overview Hero Background
 
 - `assets/img/figures/hero-wam-future.png`
