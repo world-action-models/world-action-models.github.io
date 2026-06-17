@@ -8,6 +8,12 @@ All deployed assets are local copies so the GitHub Pages repository is self-cont
   - Copied from `../../our-wam-survey/main.pdf`.
   - Linked from the homepage PDF button.
 
+## Citation
+
+- `wam-survey-nus.bib`
+  - Homepage BibTeX entry for citing the survey.
+  - Linked from the homepage BibTeX button.
+
 ## Overview Hero Background
 
 - `assets/img/figures/hero-wam-future.png`
