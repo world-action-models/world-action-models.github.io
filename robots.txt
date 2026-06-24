@@ -1,0 +1,28 @@
+# https://world-action-models.github.io/robots.txt
+# Allow every well-behaved crawler full access.
+User-agent: *
+Allow: /
+
+# Major AI / answer-engine crawlers (kept explicit so they are never blocked).
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://world-action-models.github.io/sitemap.xml
