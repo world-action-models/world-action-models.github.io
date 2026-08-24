@@ -8,7 +8,7 @@
     },
     "notes": "Generated inside our-homepage from read-only survey sources. Citation counts and exact arXiv dates are filled by scripts/update-paper-metadata.mjs.",
     "total": 109,
-    "metadataUpdatedAt": "2026-08-17T09:03:58.168Z",
+    "metadataUpdatedAt": "2026-08-24T09:08:05.791Z",
     "citationSources": [
       "Semantic Scholar",
       "OpenAlex"
